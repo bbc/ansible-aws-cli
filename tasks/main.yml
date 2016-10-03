@@ -1,9 +1,10 @@
 ---
+
 - name: 'Install Python PIP'
   tags: 'aws-cli'
   sudo: 'yes'
-  apt: >
-    pkg=python-pip
+  package: >
+    name=python-pip
     state=latest
 
 - name: 'Install AWS CLI'
