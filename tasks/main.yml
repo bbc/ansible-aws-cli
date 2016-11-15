@@ -1,11 +1,11 @@
 ---
 
-- name: 'Install Python PIP'
-  tags: 'aws-cli'
-  sudo: 'yes'
-  package: >
-    name=python-pip
-    state=latest
+#- name: 'Install Python PIP'
+#  tags: 'aws-cli'
+#  sudo: 'yes'
+#  package: >
+#    name=python-pip
+#    state=latest
 
 - name: 'Install AWS CLI'
   tags: 'aws-cli'
@@ -13,6 +13,7 @@
   pip: >
     name=awscli
     state=latest
+    executable=/usr/local/bin/pip3.5
 
 - name: Set home directory of the user
   set_fact:
